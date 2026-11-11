@@ -1,0 +1,5 @@
+/* Decorative styling, loaded as a blocking stylesheet in the starter. */
+.hero { box-shadow: 0 0.8rem 2.4rem var(--color-shadow-hero); }
+.session-card { transition: box-shadow 180ms ease, border-color 180ms ease; }
+.session-card:hover { box-shadow: 0 0.6rem 1.6rem var(--color-shadow-hover); border-color: var(--color-accent-light); }
+.brand-mark { transform: rotate(-8deg); }

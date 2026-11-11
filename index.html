@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore 198 engineering sessions across three days at Northstar Developer Forum.">
+    <title>Programme | Northstar Developer Forum</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/extras.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#programme">Skip to programme</a>
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Conference navigation and filters">
+            <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✳</span> Northstar</a>
+            <p class="brand-caption">Developer Forum 2027</p>
+            <p class="sidebar-heading">Explore</p>
+            <nav class="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#programme" aria-current="page">Programme</a></li>
+                    <li><a href="#about">About the event</a></li>
+                </ul>
+            </nav>
+            <button id="saved-filter" class="saved-filter" type="button" aria-pressed="false">
+                <span>★ My schedule</span><span id="saved-count" class="saved-count">0</span>
+            </button>
+            <form id="filter-form">
+                <fieldset class="filter-set">
+                    <legend>Tracks</legend>
+                    <ul id="track-list" class="track-list"></ul>
+                </fieldset>
+                <fieldset class="filter-set">
+                    <legend>Presentation format</legend>
+                    <select id="format-filter" class="select-control" aria-label="Presentation format">
+                        <option value="">All formats</option>
+                    </select>
+                </fieldset>
+            </form>
+            <p class="sidebar-note"><strong>One ticket. More perspectives.</strong> Build your own schedule from six parallel conference tracks.</p>
+        </aside>
+        <div class="site-main" id="top">
+            <header class="topbar">
+                <span class="edition">Copenhagen · 21–23 January 2027</span>
+                <span class="top-pill">Registration open</span>
+            </header>
+            <main>
+                <section class="hero" aria-labelledby="hero-title">
+                    <img class="hero-image" src="assets/hero.jpg" alt="Abstract illuminated conference stage">
+                    <div class="hero-copy">
+                        <span class="eyebrow">Northstar / 2027</span>
+                        <h1 id="hero-title">Ideas worth building.</h1>
+                        <p>Three days of practical engineering, honest conversations and new perspectives on the web.</p>
+                        <a class="hero-link" href="#programme">Explore the programme</a>
+                    </div>
+                </section>
+                <div class="stats" aria-label="Conference at a glance">
+                    <div class="stat"><span class="stat-number">198</span><span class="stat-label">Sessions</span></div>
+                    <div class="stat"><span class="stat-number">6</span><span class="stat-label">Parallel tracks</span></div>
+                    <div class="stat"><span class="stat-number">3</span><span class="stat-label">Days in Copenhagen</span></div>
+                </div>
+                <section id="programme" class="programme" aria-labelledby="programme-title">
+                    <div class="section-top">
+                        <div>
+                            <p class="section-kicker">The programme</p>
+                            <h2 id="programme-title">Find your next perspective.</h2>
+                            <p>Filter by day, track or format. Save sessions to your personal schedule.</p>
+                        </div>
+                        <div class="search-field">
+                            <label for="search-input">Search sessions</label>
+                            <input id="search-input" type="search" placeholder="Try accessibility or APIs" autocomplete="off">
+                        </div>
+                    </div>
+                    <ul id="day-list" class="day-list" aria-label="Conference days"></ul>
+                    <div class="list-heading"><strong id="day-heading">Loading programme…</strong><span id="result-count" role="status" aria-live="polite"></span></div>
+                    <div id="schedule" class="schedule"></div>
+                </section>
+                <section id="about" class="about" aria-labelledby="about-title">
+                    <h2 id="about-title">Built for people who build things.</h2>
+                    <p>Northstar brings software developers, architects, researchers and engineering leads together to share approaches that work beyond the slide deck.</p>
+                </section>
+            </main>
+            <footer class="footer">© Northstar Developer Forum · Copenhagen 2027</footer>
+        </div>
+    </div>
+    <dialog class="details-dialog" id="details-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-top"><span class="eyebrow">Session details</span><button id="dialog-close" class="dialog-close" type="button" aria-label="Close details">×</button></div>
+        <h2 id="dialog-title" class="dialog-title"></h2>
+        <p id="dialog-meta" class="dialog-meta"></p>
+        <p id="dialog-description" class="dialog-copy"></p>
+        <div id="dialog-speakers" class="dialog-speakers"></div>
+    </dialog>
+</body>
+</html>
